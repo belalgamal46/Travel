@@ -4,6 +4,57 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #232323;
+  --body-bg-color: #e9e7e7;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: #e9e7e7;
+  background-color: var(--body-bg-color);
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ---------------- navbar ---------------- */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 7rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 30%;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.nav-links-container li a {
+  color: var(--primary-color);
+}
+
+.nav-links-container li:nth-child(1) {
+  font-weight: 800;
+}
+
+.contact-us-btn-container button {
+  border: 3px solid #232323;
+  padding: 1rem 4rem;
+  background-color: transparent;
+  border-radius: 7px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--primary-color);
 }
