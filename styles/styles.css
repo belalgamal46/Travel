@@ -325,3 +325,102 @@ a {
   width: 10%;
   position: absolute;
 }
+
+/* ---------------- Choose Anywhere Section ---------------- */
+#choose-anywhere-section {
+  background-color: var(--primary-color);
+  color: var(--body-bg-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  padding: 15rem 7rem;
+  padding-right: 0;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20rem;
+}
+
+#choose-anywhere-scrable {
+  position: absolute;
+  bottom: -50px;
+  left: -100px;
+  width: 30%;
+}
+
+.main-title {
+  font-size: 7rem;
+  font-weight: 800;
+  width: 70%;
+  font-family: 'Cardo', serif;
+  margin-bottom: 10rem;
+}
+
+.choose-anywhere-content h4 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.choose-anywhere-content h4:nth-child(3) {
+  margin-top: 5rem;
+}
+
+.choose-anywhere-content p {
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+/* ---------------- Faq ---------------- */
+#faq {
+  height: 100vh;
+  display: flex;
+  padding: 7rem;
+  column-gap: 10rem;
+}
+
+#faq div:first-child {
+  flex: 2;
+}
+
+#faq div:first-child h2 {
+  font-size: 7rem;
+  font-family: 'Cardo', serif;
+  width: 60%;
+  margin-bottom: 10rem;
+}
+
+#faq div:nth-child(2) {
+  flex: 1;
+}
+
+#faq-image {
+  width: 100%;
+}
+
+.faq-questions-container {
+  list-style: none;
+}
+
+.faq-questions-container li {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
+
+.faq-questions-container li button {
+  width: 2%;
+  border: none;
+  background-color: transparent;
+}
+
+.faq-questions-container li button img {
+  width: 100%;
+}
+
+.faq-questions-container hr {
+  border: none;
+  height: 2px;
+  background-color: var(--primary-color);
+}
