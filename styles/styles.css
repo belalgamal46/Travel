@@ -57,4 +57,271 @@ a {
   font-size: 1.8rem;
   font-weight: 900;
   color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.contact-us-btn-container button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* ---------------- Hero Section ---------------- */
+#hero-section {
+  display: flex;
+  height: 90vh;
+  column-gap: 10rem;
+  padding: 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#left-scrable {
+  position: absolute;
+  z-index: -1;
+  left: -480px;
+  top: 300px;
+  transform: rotateY(45deg);
+  width: 70%;
+  opacity: 20%;
+}
+
+#right-scrable {
+  position: absolute;
+  z-index: 100;
+  top: 500px;
+  right: -40px;
+  height: 55%;
+  overflow: hidden;
+}
+
+.hero-image {
+  flex: 1;
+}
+.hero-image img {
+  width: 100%;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 10rem;
+  width: 70%;
+  margin-bottom: 3rem;
+  font-family: 'Cardo', serif;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.hero-content button {
+  padding: 1.5rem 5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 7px;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ---------------- Create Memory Section ---------------- */
+#create-memory-section {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+
+#create-memory-section h2 {
+  font-size: 7rem;
+  font-weight: 700;
+  font-family: 'Cardo', serif;
+  width: 40%;
+  margin: auto;
+  line-height: 8rem;
+}
+
+#create-memory-section p {
+  font-size: 2rem;
+  width: 45%;
+  margin: 2rem auto;
+}
+
+#create-memory-section button {
+  background-color: transparent;
+  border: 3px solid white;
+  color: white;
+  border-radius: 7px;
+  padding: 1.5rem 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#memory-left-scrable {
+  position: absolute;
+  left: -100px;
+  top: 30px;
+  width: 30%;
+}
+
+#memory-right-scrable {
+  position: absolute;
+  top: 250px;
+  right: -30px;
+  width: 28%;
+}
+
+/* ---------------- unknown-section ---------------- */
+#unknown-section {
+  height: 120vh;
+  padding: 15rem 20rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#unknown-right-scrable {
+  position: absolute;
+  right: -45px;
+  top: 300px;
+  height: 50%;
+}
+
+#unknown-left-scrable {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  height: 100%;
+}
+
+.unknown-cards-container {
+  display: flex;
+  column-gap: 7rem;
+}
+
+.card-image-container {
+  height: 350px;
+}
+
+.unknown-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.unknown-card hr {
+  width: 7%;
+  height: 3px;
+  margin: 2.5rem 0;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+.unknown-card h3 {
+  font-size: 2.5rem;
+  font-family: 'Cardo', serif;
+  font-weight: 700;
+  width: 40%;
+}
+
+/* ---------------- See Places Section ---------------- */
+#see-places-section {
+  padding: 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.see-places-top-image {
+  width: 100%;
+}
+
+.see-places-top-image img {
+  width: 100%;
+  height: 100px;
+}
+
+#see-places-left-scrable-container {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 25rem;
+  padding-left: 5rem;
+}
+
+#see-places-left-scrable-container img {
+  width: 25%;
+}
+
+#see-places-right-scrable {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  right: -120px;
+  opacity: 20%;
+}
+
+.see-places-title {
+  text-align: center;
+}
+
+.see-places-title h2 {
+  font-size: 8rem;
+  font-family: 'Cardo', serif;
+  font-weight: 700;
+  width: 45%;
+  margin: 2rem auto;
+  line-height: 9rem;
+}
+
+.see-places-title h2 em {
+  text-decoration: underline;
+}
+
+.see-places-title p {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.see-places-sub-section {
+  display: flex;
+  padding: 0 5rem;
+  column-gap: 5rem;
+  position: relative;
+}
+
+.see-places-sub-section-image-container {
+  margin-bottom: 7rem;
+}
+
+.see-places-sub-section-text {
+  display: flex;
+
+  column-gap: 5rem;
+}
+
+.see-places-sub-section-text h3 {
+  font-size: 4rem;
+  font-family: 'Cardo', serif;
+  text-decoration: underline;
+  color: var(--primary-color);
+  flex: 1;
+}
+
+.see-places-sub-section-paragraph {
+  font-size: 2rem;
+  flex: 1.5;
+}
+.see-places-sub-section-paragraph p:first-child {
+  margin-bottom: 2rem;
+}
+
+.see-places-sub-section-paragraph img {
+  right: 5rem;
+  bottom: 5rem;
+  width: 10%;
+  position: absolute;
 }
