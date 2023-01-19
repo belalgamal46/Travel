@@ -11,6 +11,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,10 +21,17 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--primary-color);
 }
 
 /* ---------------- navbar ---------------- */
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--body-bg-color);
+  z-index: 100;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -58,11 +66,6 @@ a {
   font-weight: 900;
   color: var(--primary-color);
   transition: all 0.5s;
-}
-
-.contact-us-btn-container button:hover {
-  background-color: var(--primary-color);
-  color: white;
 }
 
 /* ---------------- Hero Section ---------------- */
@@ -124,6 +127,8 @@ a {
   border: none;
   font-size: 2rem;
   font-weight: 700;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 /* ---------------- Create Memory Section ---------------- */
@@ -158,6 +163,8 @@ a {
   padding: 1.5rem 5rem;
   font-size: 2rem;
   font-weight: 700;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 #memory-left-scrable {
@@ -186,6 +193,7 @@ a {
   right: -45px;
   top: 300px;
   height: 50%;
+  z-index: -5;
 }
 
 #unknown-left-scrable {
@@ -193,6 +201,7 @@ a {
   left: -100px;
   top: 0;
   height: 100%;
+  z-index: -5;
 }
 
 .unknown-cards-container {
@@ -202,6 +211,17 @@ a {
 
 .card-image-container {
   height: 350px;
+}
+
+.unknown-card {
+  padding: 3rem;
+  border-radius: 7px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.unknown-card:hover {
+  background-color: white;
 }
 
 .unknown-card img {
@@ -318,6 +338,12 @@ a {
   bottom: 5rem;
   width: 10%;
   position: absolute;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.see-places-sub-section-paragraph img:hover {
+  transform: translateX(10px);
 }
 
 /* ---------------- Choose Anywhere Section ---------------- */
@@ -405,6 +431,7 @@ a {
   width: 2%;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .faq-questions-container li button img {
@@ -441,7 +468,9 @@ a {
   border: 1px solid var(--primary-color);
   border-radius: 7px;
   padding: 5rem 2rem;
+  transition: all 0.4s;
 }
+
 .card div {
   width: 50%;
   margin: auto;
@@ -490,12 +519,21 @@ a {
 .form-container button {
   width: 100%;
   padding: 1.5rem;
+  border: 2px solid var(--primary-color);
   background-color: var(--primary-color);
   border-radius: 7px;
   border: none;
   color: white;
   font-weight: 700;
   font-size: 1.7rem;
+  transition: all 0.4s, border 0.1s;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 input,
@@ -549,4 +587,265 @@ footer {
   row-gap: 1rem;
   flex-direction: column;
   font-size: 1.5rem;
+}
+
+/*media queries*/
+
+@media only screen and (max-width: 600px) {
+  /*navbar*/
+  .nav-container {
+    padding: 3rem;
+  }
+
+  .nav-links-container {
+    font-size: 1rem;
+    width: 50%;
+  }
+
+  .contact-us-btn-container button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .contact-us-btn-container button:active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  /*Hero Section*/
+  #hero-section {
+    padding: 3rem;
+  }
+  .hero-content h1 {
+    font-size: 6rem;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  #right-scrable {
+    display: none;
+  }
+
+  #left-scrable {
+    display: none;
+  }
+
+  .hero-content button:active {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+
+  /*create memory*/
+  #create-memory-section h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  #create-memory-section p {
+    width: 100%;
+  }
+
+  #create-memory-section button:active {
+    background-color: white;
+    color: var(--primary-color);
+  }
+
+  #memory-right-scrable {
+    display: none;
+  }
+  #memory-left-scrable {
+    display: none;
+  }
+
+  /*unknown section*/
+  #unknown-section {
+    padding: 2rem;
+  }
+
+  .unknown-cards-container {
+    flex-wrap: wrap;
+    column-gap: 1rem;
+  }
+
+  #unknown-right-scrable {
+    height: 20%;
+  }
+  #unknown-left-scrable {
+    height: 40%;
+    left: -85px;
+  }
+
+  /*See Places Section*/
+  #see-places-section {
+    padding: 2rem;
+  }
+  .see-places-title {
+    margin-bottom: 5rem;
+  }
+  .see-places-title h2 {
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+
+  .see-places-title p {
+    font-size: 1rem;
+  }
+
+  #see-places-right-scrable {
+    z-index: -5;
+  }
+
+  #see-places-left-scrable-container {
+    display: none;
+  }
+
+  .see-places-sub-section {
+    padding: 0;
+    gap: 0;
+  }
+
+  .see-places-sub-section-image-container img {
+    width: 100%;
+  }
+
+  .see-places-sub-section-left-image img {
+    display: none;
+  }
+
+  .see-places-sub-section-text {
+    column-gap: 0;
+    row-gap: 2rem;
+    flex-direction: column;
+  }
+
+  /*choose anywhere*/
+  .container {
+    padding: 3rem;
+    flex-direction: column;
+  }
+
+  .main-title {
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+  }
+  .choose-anywhere-image {
+    display: none;
+  }
+
+  #choose-anywhere-scrable {
+    display: none;
+  }
+
+  /*faq*/
+  #faq {
+    padding: 3rem;
+  }
+
+  #faq div:first-child h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  #faq div:nth-child(2) {
+    display: none;
+  }
+
+  .faq-questions-container li {
+    padding: 2rem 1rem;
+    column-gap: 2rem;
+  }
+
+  .faq-questions-container li p {
+    flex: 20;
+  }
+
+  .faq-questions-container li button {
+    flex: 1;
+  }
+
+  /*slider Section*/
+  #slider-section {
+    padding: 3rem;
+  }
+
+  #slider-section h2 {
+    font-size: 4rem;
+  }
+
+  .slider {
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .card:active {
+    background-color: white;
+  }
+
+  /*contact us*/
+  #contact-us {
+    padding: 3rem;
+    gap: 0;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  /*footer*/
+  .footer-container {
+    padding: 3rem;
+    flex-direction: column;
+  }
+
+  .footer-container h2 {
+    font-size: 3rem;
+  }
+
+  .footer-quick-links {
+    margin-top: 2rem;
+  }
+
+  .footer-links-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 3rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /*navbar*/
+  .contact-us-btn-container button:active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /*navbar*/
+  .contact-us-btn-container button:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  /*hero section*/
+  .hero-content button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+
+  /*create memory*/
+  #create-memory-section button:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+
+  /*slider section*/
+  .card:hover {
+    background-color: white;
+  }
 }
