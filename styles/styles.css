@@ -51,6 +51,7 @@ header {
 
 .nav-links-container li a {
   color: var(--primary-color);
+  transition: all 0.3s;
 }
 
 .nav-links-container li:nth-child(1) {
@@ -827,6 +828,10 @@ footer {
 
 @media only screen and (min-width: 1200px) {
   /*navbar*/
+  .nav-links-container li a:hover {
+    font-weight: 800;
+  }
+
   .contact-us-btn-container button:hover {
     background-color: var(--primary-color);
     color: white;
