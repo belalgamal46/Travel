@@ -220,10 +220,6 @@ header {
   cursor: pointer;
 }
 
-.unknown-card:hover {
-  background-color: white;
-}
-
 .unknown-card img {
   width: 100%;
   height: 100%;
@@ -667,7 +663,12 @@ footer {
 
   .unknown-cards-container {
     flex-wrap: wrap;
-    column-gap: 1rem;
+    column-gap: 0;
+    row-gap: 2rem;
+  }
+
+  .unknown-card:active {
+    background-color: white;
   }
 
   #unknown-right-scrable {
@@ -842,6 +843,11 @@ footer {
   #create-memory-section button:hover {
     background-color: white;
     color: var(--primary-color);
+  }
+
+  /*unknown section*/
+  .unknown-card:hover {
+    background-color: white;
   }
 
   /*slider section*/
